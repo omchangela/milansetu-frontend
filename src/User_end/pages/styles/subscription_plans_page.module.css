@@ -1,0 +1,475 @@
+.container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #FAF3EE; /* ivory/blush */
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Main Content */
+.mainLayout {
+  flex: 1;
+  margin-left: 260px; /* Sidebar width */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Top Navbar */
+.topNavbar {
+  height: 70px;
+  background-color: #fff;
+  border-bottom: 1px solid #F0EDEA;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  position: sticky;
+  top: 0;
+  z-index: 90;
+}
+
+.logoText {
+  font-family: 'Poppins', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #6E1E37;
+  text-decoration: none;
+}
+
+.searchPill {
+  display: flex;
+  align-items: center;
+  background-color: #F0EDEA;
+  border-radius: 24px;
+  padding: 8px 16px;
+  width: 320px;
+  gap: 10px;
+}
+
+.searchIcon { color: #7A7A7A; }
+.searchInput {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 14px;
+  width: 100%;
+}
+
+.navActions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.actionIcon {
+  color: #3A3A3A;
+  cursor: pointer;
+}
+
+.userAvatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Content Body */
+.pageBody {
+  padding: 60px 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heroSection {
+  text-align: center;
+  margin-bottom: 60px;
+  max-width: 600px;
+}
+
+.pageTitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: #6E1E37;
+  margin: 0 0 16px 0;
+}
+
+.pageSubtitle {
+  font-size: 15px;
+  color: #7A7A7A;
+  line-height: 1.6;
+}
+
+/* Pricing Cards */
+.pricingRow {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 24px;
+  margin-bottom: 80px;
+  width: 100%;
+}
+
+.pricingCard {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 40px 30px;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+  position: relative;
+}
+
+.diamondCard {
+  background-color: #FCF6EA;
+  border: 2px solid #C9971F;
+  transform: scale(1.05);
+  box-shadow: 0 16px 40px rgba(201, 151, 31, 0.15);
+  z-index: 10;
+}
+
+.popularBadge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #C9971F;
+  color: #fff;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.planLabel {
+  font-size: 11px;
+  font-weight: 800;
+  color: #B68A2E;
+  letter-spacing: 1.5px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.planName {
+  font-family: 'Poppins', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #6E1E37;
+  margin-bottom: 16px;
+}
+
+.priceBlock {
+  margin-bottom: 30px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #EAE2DD;
+}
+
+.priceValue {
+  font-family: 'Poppins', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: #6E1E37;
+}
+
+.pricePeriod {
+  font-size: 13px;
+  color: #7A7A7A;
+}
+
+.featureList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 40px;
+  flex: 1;
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: #3A3A3A;
+  line-height: 1.4;
+}
+
+.featureBold {
+  font-weight: 700;
+}
+
+.featureDisabled {
+  color: #A0A0A0;
+}
+
+.checkIconCircle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #FBF3E0;
+  color: #C9971F;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.crossIconCircle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #F2F0EF;
+  color: #A0A0A0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.actionBtn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btnGoldOutlined {
+  background: #fff;
+  border: 1px solid #6E1E37;
+  color: #6E1E37;
+}
+
+.btnDiamondFilled {
+  background-color: #6E1E37;
+  color: #fff;
+  border: none;
+}
+
+.btnPlatinumOutlined {
+  background: #fff;
+  border: 1px solid #C9971F;
+  color: #C9971F;
+}
+
+/* Comparison Section */
+.comparisonSection {
+  width: 100%;
+  margin-bottom: 80px;
+}
+
+.sectionHeading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.sectionTitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #6E1E37;
+  margin: 0 0 8px 0;
+}
+
+.comparisonTable {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+}
+
+.tableHeaderRow {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  background-color: #6E1E37;
+  color: #fff;
+}
+
+.headerCell {
+  padding: 20px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.headerCell:first-child {
+  text-align: left;
+  justify-content: flex-start;
+  padding-left: 30px;
+}
+
+.diamondHeader {
+  background-color: #5A172D; /* slightly darker maroon */
+}
+
+.dividerRow {
+  grid-column: 1 / -1;
+  background-color: #FAF3EE;
+  padding: 12px 30px;
+  font-size: 11px;
+  font-weight: 800;
+  color: #B68A2E;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.dataRow {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  border-bottom: 1px solid #EAE2DD;
+}
+
+.dataRow:last-child {
+  border-bottom: none;
+}
+
+.dataCell {
+  padding: 20px;
+  font-size: 14px;
+  color: #3A3A3A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.dataCell:first-child {
+  text-align: left;
+  justify-content: flex-start;
+  padding-left: 30px;
+  font-weight: 600;
+}
+
+.diamondHighlight {
+  background-color: #F7EFDD;
+}
+
+.textBold {
+  font-weight: 700;
+}
+
+/* Footer Block */
+.footerBlock {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  background-color: #F2EFEC;
+  border-radius: 16px;
+  padding: 40px;
+}
+
+.trustSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.trustHeading {
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #3A3A3A;
+  margin: 0 0 12px 0;
+}
+
+.trustDesc {
+  font-size: 14px;
+  color: #7A7A7A;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.trustBadges {
+  display: flex;
+  gap: 24px;
+}
+
+.badgeItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #3A3A3A;
+}
+
+.badgeIcon {
+  color: #B68A2E;
+}
+
+.adviceCard {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 32px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+
+.adviceHeading {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #6E1E37;
+  margin: 0 0 12px 0;
+}
+
+.adviceDesc {
+  font-size: 14px;
+  color: #7A7A7A;
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+.consultBtn {
+  background-color: #A9882E;
+  color: #fff;
+  border: none;
+  border-radius: 24px;
+  padding: 12px 32px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.availText {
+  font-size: 12px;
+  color: #999;
+}
+
+@media (max-width: 1200px) {
+  .pricingRow { flex-direction: column; align-items: center; }
+  .diamondCard { transform: none; }
+  .footerBlock { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  .mainLayout { margin-left: 0; }
+  .tableHeaderRow, .dataRow {
+    grid-template-columns: 1fr 1fr;
+    font-size: 12px;
+  }
+  .headerCell:not(:first-child), .dataCell:not(:first-child) { display: none; } /* Simplified for mobile if needed */
+}

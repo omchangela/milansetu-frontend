@@ -1,0 +1,545 @@
+.registerContainer {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ── LEFT PANEL ─────────────────────────────────────── */
+.leftPanel {
+  width: 52%;
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  padding: 48px 64px;
+  overflow-y: auto;
+}
+
+.personalDetailsHeader {
+  margin-bottom: 28px;
+}
+
+.personalDetailsHeader h2 {
+  font-family: 'Poppins', sans-serif;
+  color: #1A1A1A;
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+/* Step indicator row */
+.stepIndicator {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #6B6B6B;
+  font-size: 13px;
+  margin-bottom: 14px;
+}
+
+.stepCircle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #4A0E1D;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* Progress bar */
+.progressTrack {
+  height: 4px;
+  background-color: #f0e8e8;
+  border-radius: 2px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, #4A0E1D, #800000);
+  border-radius: 2px;
+  transition: width 0.4s ease;
+}
+
+/* Step dots */
+.stepDots {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.stepDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #e0d0d0;
+  transition: background-color 0.3s;
+}
+
+.stepDotActive {
+  background-color: #4A0E1D;
+}
+
+/* ── Form Layout ─────────────────────────────────────── */
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.formGroup {
+  margin-bottom: 20px;
+}
+
+.label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #1A1A1A;
+  margin-bottom: 6px;
+}
+
+.req {
+  color: #800000;
+  margin-left: 2px;
+}
+
+.optional {
+  color: #aaa;
+  font-weight: 400;
+  font-size: 12px;
+  margin-left: 4px;
+}
+
+.input {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1.5px solid #E0DCD6;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+  background: #FDFDFD;
+  font-family: 'Poppins', sans-serif;
+  color: #1a1a1a;
+  box-sizing: border-box;
+}
+
+.input:focus {
+  border-color: #4A0E1D;
+  background: #fff;
+}
+
+/* Gender toggle */
+.genderToggle {
+  display: flex;
+  gap: 12px;
+}
+
+.genderBtn {
+  flex: 1;
+  padding: 11px;
+  border: 1.5px solid #E0DCD6;
+  border-radius: 8px;
+  background: white;
+  color: #555;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.2s;
+}
+
+.genderBtnActive {
+  background: #4A0E1D;
+  color: white;
+  border-color: #4A0E1D;
+}
+
+/* Phone input */
+.phoneInputWrapper {
+  display: flex;
+  gap: 10px;
+}
+
+.countryCode {
+  width: 90px !important;
+  flex-shrink: 0;
+}
+
+/* Pill selector (marital status, family values, zodiac, etc.) */
+.pillGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pill {
+  padding: 7px 14px;
+  border: 1.5px solid #E0DCD6;
+  border-radius: 20px;
+  background: white;
+  color: #555;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.pill:hover {
+  border-color: #4A0E1D;
+  color: #4A0E1D;
+}
+
+.pillActive {
+  background: #4A0E1D;
+  color: white;
+  border-color: #4A0E1D;
+}
+
+/* Income range row */
+.incomeRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.incomeSep {
+  color: #999;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.incomeUnit {
+  width: 90px !important;
+  flex-shrink: 0;
+}
+
+/* Info box */
+.infoBox {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background-color: #fdf8f0;
+  border: 1px solid #f0e6d2;
+  border-radius: 10px;
+  padding: 14px 16px;
+  font-size: 13px;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.infoIcon {
+  color: #B8860B;
+  font-size: 16px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.fieldHint {
+  font-size: 12px;
+  color: #999;
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
+/* ── Navigation Buttons ─────────────────────────────── */
+.btnRow {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.backBtn {
+  flex: 0 0 110px;
+  background: transparent;
+  border: 1.5px solid #E0DCD6;
+  color: #555;
+  border-radius: 8px;
+  padding: 14px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.2s;
+}
+
+.backBtn:hover {
+  border-color: #4A0E1D;
+  color: #4A0E1D;
+}
+
+.saveBtn {
+  flex: 1;
+  background: linear-gradient(135deg, #4A0E1D 0%, #800000 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 14px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 4px 14px rgba(74, 14, 29, 0.25);
+  transition: opacity 0.2s;
+  letter-spacing: 0.3px;
+}
+
+.saveBtn:hover {
+  opacity: 0.92;
+}
+
+/* ── RIGHT PANEL ─────────────────────────────────────── */
+.rightPanel {
+  width: 48%;
+  background: linear-gradient(150deg, #3A0815 0%, #5D1225 60%, #4A0E1D 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 40px 32px;
+  overflow: hidden;
+}
+
+.showcaseHeading {
+  font-family: 'Poppins', sans-serif;
+  color: #C5A059;
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 28px;
+  line-height: 1.3;
+  max-width: 360px;
+}
+
+.phoneMockupContainer {
+  position: relative;
+  width: 220px;
+  height: 420px;
+  background: #1A1A1A;
+  border-radius: 32px;
+  border: 7px solid #2A2A2A;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 28px;
+}
+
+.mockupContent {
+  width: 100%;
+  height: 100%;
+}
+
+.mockupImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.85;
+}
+
+/* Right-side step list */
+.rightStepList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  max-width: 220px;
+  margin-bottom: 8px;
+}
+
+.rightStep {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.45);
+  transition: color 0.3s;
+}
+
+.rightStepActive {
+  color: #C5A059;
+  font-weight: 700;
+}
+
+.rightStepDone {
+  color: rgba(255,255,255,0.7);
+}
+
+.rightStepNum {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 2px solid currentColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  flex-shrink: 0;
+  background: transparent;
+  transition: background 0.3s;
+}
+
+.rightStepActive .rightStepNum {
+  background: #C5A059;
+  border-color: #C5A059;
+  color: #3A0815;
+}
+
+.rightStepDone .rightStepNum {
+  background: rgba(255,255,255,0.15);
+  border-color: rgba(255,255,255,0.5);
+  color: #fff;
+}
+
+/* Floating feature cards */
+.floatingCard {
+  position: absolute;
+  background: white;
+  padding: 10px 14px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 5;
+}
+
+.cardIcon {
+  width: 30px;
+  height: 30px;
+  background: #FDF4E3;
+  color: #C5A059;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.cardText {
+  display: flex;
+  flex-direction: column;
+}
+
+.cardTag {
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: #4A0E1D;
+  text-transform: uppercase;
+}
+
+.cardLabel {
+  font-size: 12px;
+  font-weight: 600;
+  color: #1A1A1A;
+}
+
+.cardElite {
+  top: 12%;
+  right: 8%;
+}
+
+.cardVerified {
+  bottom: 10%;
+  left: 8%;
+}
+
+/* ── Responsive ──────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .registerContainer {
+    flex-direction: column;
+    height: auto;
+    overflow-y: auto;
+  }
+  .leftPanel, .rightPanel {
+    width: 100%;
+    padding: 40px 24px;
+  }
+  .rightPanel {
+    height: 400px;
+  }
+  .rightStepList,
+  .phoneMockupContainer {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+  .leftPanel {
+    padding: 32px 20px;
+  }
+}
+
+/* ── API error banner ──────────────────────────────────────────────────────── */
+.apiError {
+  background: #fff0f0;
+  color: #c0392b;
+  border: 1px solid #e88;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 13px;
+  margin-bottom: 14px;
+}
+
+.hiddenFileInput {
+  display: none;
+}
+
+.photoUploadRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.photoPreview {
+  width: 72px;
+  height: 72px;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 1px solid #eee;
+}
+
+.photoPlaceholder {
+  width: 72px;
+  height: 72px;
+  border-radius: 12px;
+  background: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+}
+
+.photoUploadBtn {
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: 1px solid #8b1538;
+  background: #fff;
+  color: #8b1538;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.photoUploadBtn:hover {
+  background: #fdf5f7;
+}

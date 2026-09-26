@@ -1,0 +1,603 @@
+.container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #FAF3EE; /* warm ivory/blush */
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Sidebar Custom Content */
+.sidebarBadgeCard {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  margin: 30px 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.goldCircleIcon {
+  width: 40px;
+  height: 40px;
+  background-color: #FAF3EE;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #C9971F;
+  border: 1px solid #C9971F;
+}
+
+.badgeTextInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.shubhMilanBrand {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #6E1E37;
+}
+
+.eliteLabel {
+  font-size: 10px;
+  font-weight: 700;
+  color: #7A7A7A;
+  letter-spacing: 1px;
+}
+
+.upgradeBtnRoyal {
+  background: linear-gradient(135deg, #B68A2E 0%, #C9971F 100%);
+  color: #fff;
+  border: none;
+  border-radius: 24px;
+  padding: 12px;
+  width: 100%;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-bottom: 16px;
+}
+
+.sidebarFooterLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 16px;
+  border-top: 1px solid #EAE2DD;
+}
+
+.sidebarFooterLink {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #3A3A3A;
+  cursor: pointer;
+}
+
+.logoutRed {
+  color: #C0392B;
+}
+
+/* Main Content */
+.mainLayout {
+  flex: 1;
+  margin-left: 320px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Top Navbar */
+.topNavbar {
+  height: 70px;
+  background-color: #fff;
+  border-bottom: 1px solid #F0EDEA;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  position: sticky;
+  top: 0;
+  z-index: 90;
+}
+
+.logoText {
+  font-family: 'Poppins', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #6E1E37;
+  text-decoration: none;
+}
+
+.searchPill {
+  display: flex;
+  align-items: center;
+  background-color: #F0EDEA;
+  border-radius: 24px;
+  padding: 8px 16px;
+  width: 320px;
+  gap: 10px;
+}
+
+.searchIcon { color: #7A7A7A; }
+.searchInput {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 14px;
+  width: 100%;
+}
+
+.navActions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.actionIcon {
+  color: #3A3A3A;
+  cursor: pointer;
+}
+
+.userAvatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Page Body */
+.pageBody {
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.pageTitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: #6E1E37;
+  margin: 0 0 8px 0;
+}
+
+.pageSubtitle {
+  font-size: 14px;
+  color: #7A7A7A;
+}
+
+.scheduleNewBtn {
+  background: #fff;
+  border: 1px solid #6E1E37;
+  color: #6E1E37;
+  padding: 10px 24px;
+  border-radius: 24px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  min-width: 140px;
+}
+
+/* Grid Layout */
+.contentGrid {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 40px;
+}
+
+/* Left Column Elements */
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.sectionTitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #6E1E37;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sectionActionLink {
+  color: #6E1E37;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.sectionSubtext {
+  font-size: 13px;
+  color: #7A7A7A;
+}
+
+.upcomingGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.meetingCard {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.cardHeaderRow {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.avatarWrapper {
+  position: relative;
+  width: 64px;
+  height: 64px;
+}
+
+.squareAvatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.verifiedBadge {
+  position: absolute;
+  bottom: -4px;
+  right: -4px;
+  background-color: #1E8A5F;
+  color: #fff;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #fff;
+}
+
+.nameInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cardName {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #6E1E37;
+  margin-bottom: 4px;
+}
+
+.matchQuality {
+  font-size: 12px;
+  font-weight: 700;
+  color: #B68A2E;
+}
+
+.detailRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  color: #3A3A3A;
+  margin-bottom: 12px;
+}
+
+.detailIcon { color: #7A7A7A; width: 16px; }
+
+.cardActions {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.primaryBtn {
+  flex: 1;
+  background-color: #6E1E37;
+  color: #fff;
+  border: none;
+  border-radius: 24px;
+  padding: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.moreIconBtn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #EAE2DD;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #7A7A7A;
+  cursor: pointer;
+}
+
+.outlinePillBtn {
+  flex: 1;
+  background: #fff;
+  border: 1px solid #6E1E37;
+  color: #6E1E37;
+  border-radius: 24px;
+  padding: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.grayPillBtn {
+  flex: 1;
+  background: #EFEDEC;
+  border: none;
+  color: #3A3A3A;
+  border-radius: 24px;
+  padding: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* History Table */
+.historyTableCard {
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.tableHeader {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr 1.5fr 1fr;
+  padding: 16px 24px;
+  background-color: #FAFAFA;
+  border-bottom: 1px solid #EAE2DD;
+  font-size: 11px;
+  font-weight: 700;
+  color: #7A7A7A;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.tableRow {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr 1.5fr 1fr;
+  padding: 16px 24px;
+  align-items: center;
+  border-bottom: 1px solid #EAE2DD;
+}
+
+.tableRow:last-child {
+  border-bottom: none;
+}
+
+.tableCell {
+  font-size: 13px;
+  color: #3A3A3A;
+}
+
+.profileCell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Gradients for generic avatars */
+.gradAvatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.grad1 { background: linear-gradient(135deg, #1abc9c, #f39c12); }
+.grad2 { background: linear-gradient(135deg, #9b59b6, #e74c3c); }
+.grad3 { background: linear-gradient(135deg, #3498db, #2ecc71); }
+
+.tableName {
+  font-weight: 700;
+  color: #6E1E37;
+}
+
+.statusPill {
+  display: inline-flex;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.statusCompleted { background-color: #E1F5EA; color: #1E8A5F; }
+.statusRescheduled { background-color: #FBF0D9; color: #9C7A1E; }
+
+/* Right Column Elements */
+/* Calendar Widget */
+.calendarWidget {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  border: 1px solid #C9971F;
+  margin-bottom: 30px;
+}
+
+.calHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.calMonth {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #6E1E37;
+}
+
+.calNav {
+  display: flex;
+  gap: 16px;
+  color: #7A7A7A;
+  cursor: pointer;
+}
+
+.calGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  text-align: center;
+}
+
+.calDayLabel {
+  font-size: 11px;
+  font-weight: 700;
+  color: #7A7A7A;
+  margin-bottom: 8px;
+}
+
+.calDateCell {
+  position: relative;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  color: #3A3A3A;
+  cursor: pointer;
+}
+
+.dateMuted { color: #D1D1D1; }
+
+.dateSelected {
+  background-color: #6E1E37;
+  color: #fff;
+  border-radius: 50%;
+  font-weight: 700;
+}
+
+.eventDot {
+  position: absolute;
+  bottom: 2px;
+  width: 4px;
+  height: 4px;
+  background-color: #B68A2E;
+  border-radius: 50%;
+}
+
+/* New Request Card */
+.requestCard {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+}
+
+.reqHeader {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.reqAvatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.reqName {
+  font-weight: 700;
+  color: #3A3A3A;
+  font-size: 15px;
+}
+
+.reqSub {
+  font-size: 12px;
+  color: #7A7A7A;
+}
+
+.reqInfoIcon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #B68A2E;
+}
+
+.reqQuote {
+  font-style: italic;
+  font-size: 13px;
+  color: #7A7A7A;
+  background-color: #F8F9FA;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.reqActions {
+  display: flex;
+  gap: 12px;
+}
+
+/* Help Card */
+.helpCard {
+  background-color: #F7E9EA;
+  border-radius: 16px;
+  padding: 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.helpIcon {
+  color: #6E1E37;
+  margin-bottom: 12px;
+}
+
+.helpTitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #6E1E37;
+  margin-bottom: 8px;
+}
+
+.helpDesc {
+  font-size: 13px;
+  color: #7A7A7A;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+@media (max-width: 1024px) {
+  .contentGrid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  .mainLayout { margin-left: 0; }
+  .upcomingGrid { grid-template-columns: 1fr; }
+  .headerRow { flex-direction: column; gap: 16px; align-items: flex-start; }
+}

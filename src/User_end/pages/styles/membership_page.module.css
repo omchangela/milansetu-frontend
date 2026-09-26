@@ -1,0 +1,514 @@
+.page {
+  background-color: #FAF8F5;
+  color: #1A1A1A;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* 1. Page Header */
+.headerSection {
+  padding: 72px 80px 40px;
+  text-align: center;
+  background-color: #FAF8F5;
+}
+
+.title {
+  font-family: 'Poppins', sans-serif;
+  color: #8B1A3A;
+  font-size: 40px;
+  font-weight: 700;
+  margin: 0 0 16px 0;
+}
+
+.subtitle {
+  font-size: 15px;
+  color: #6B6B6B;
+  max-width: 480px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* 2. Pricing Cards */
+.pricingSection {
+  padding: 0 80px 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.card {
+  width: 100%;
+  max-width: 340px;
+  min-height: 500px;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  padding: 44px 32px;
+  border: 1px solid #E0DCD6;
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+}
+
+.premiumCard {
+  border: 2px solid #C9A84C;
+  transform: scale(1.05);
+  box-shadow: 0 8px 32px rgba(139, 26, 58, 0.15);
+  z-index: 2;
+}
+
+.premiumCard:hover {
+  transform: scale(1.05) translateY(-4px);
+}
+
+.eliteCard {
+  background-color: #1A1C2E;
+  color: #FFFFFF;
+  border: none;
+}
+
+.bestValueBadge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #C9A84C;
+  color: #1A1A1A;
+  font-size: 11px;
+  padding: 5px 12px;
+  border-radius: 0 10px 0 8px;
+  font-weight: 700;
+}
+
+.cardLabel {
+  font-family: 'Poppins', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0 0 4px 0;
+}
+
+.cardTagline {
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: #C9A84C;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  display: block;
+}
+
+.priceWrapper {
+  margin-bottom: 24px;
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.price {
+  font-size: 34px;
+  font-weight: 700;
+  color: #8B1A3A;
+}
+
+.eliteCard .price {
+  color: #FFFFFF;
+}
+
+.priceSuffix {
+  font-size: 14px;
+  color: #6B6B6B;
+}
+
+.eliteCard .priceSuffix {
+  color: #C9A84C;
+}
+
+.featureList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex-grow: 1;
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.inactiveFeature {
+  opacity: 0.4;
+}
+
+.checkIcon {
+  color: #C9A84C;
+  font-weight: 700;
+}
+
+.dashIcon {
+  color: #6B6B6B;
+}
+
+.selectBtn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+}
+
+.basicBtn {
+  background-color: #FFFFFF;
+  color: #8B1A3A;
+  border: 1.5px solid #8B1A3A;
+}
+
+.premiumBtn {
+  background-color: #8B1A3A;
+  color: #FFFFFF;
+}
+
+.eliteBtn {
+  background-color: #C9A84C;
+  color: #1A1A1A;
+}
+
+/* 3. Comparison Table */
+.comparisonSection {
+  padding: 72px 80px;
+  background-color: #FFFFFF;
+}
+
+.comparisonTitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: #8B1A3A;
+  text-align: center;
+  margin: 0 0 8px 0;
+}
+
+.comparisonSubtitle {
+  text-align: center;
+  font-size: 14px;
+  color: #6B6B6B;
+  margin-bottom: 40px;
+}
+
+.tableWrapper {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.th {
+  padding: 20px;
+  font-size: 15px;
+  font-weight: 700;
+  text-align: center;
+  border-bottom: 2px solid #E8E4DF;
+}
+
+.thFirst {
+  text-align: left;
+}
+
+.thPremium {
+  color: #8B1A3A;
+}
+
+.thElite {
+  color: #C9A84C;
+}
+
+.td {
+  padding: 16px 20px;
+  font-size: 14px;
+  text-align: center;
+  border-bottom: 1px solid #E8E4DF;
+  color: #6B6B6B;
+}
+
+.tdFirst {
+  text-align: left;
+  color: #1A1A1A;
+  font-weight: 600;
+}
+
+.textMaroon {
+  color: #8B1A3A;
+  font-weight: 700;
+}
+
+.textElite {
+  color: #C9A84C;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.starIcon {
+  color: #C9A84C;
+  font-size: 18px;
+}
+
+/* 4. Trust Badges */
+.trustSection {
+  padding: 48px 80px;
+  background-color: #FAF8F5;
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+}
+
+.trustBadge {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex: 1;
+  max-width: 300px;
+}
+
+.trustIcon {
+  width: 40px;
+  height: 40px;
+  color: #8B1A3A;
+}
+
+.trustBadgeGold .trustIcon {
+  color: #C9A84C;
+}
+
+.trustText {
+  display: flex;
+  flex-direction: column;
+}
+
+.trustLabel {
+  font-size: 11px;
+  font-weight: 700;
+  color: #C9A84C;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.trustSub {
+  font-size: 12px;
+  color: #6B6B6B;
+}
+
+/* 5. FAQ Section */
+.faqSection {
+  padding: 72px 80px;
+  background-color: #FFFFFF;
+}
+
+.faqContainer {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.faqTitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 34px;
+  font-weight: 700;
+  color: #8B1A3A;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.faqList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.faqItem {
+  border: 1px solid #E0DCD6;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.faqHeader {
+  width: 100%;
+  padding: 20px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+.faqQuestion {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1A1A1A;
+}
+
+.faqChevron {
+  transition: transform 0.3s ease;
+  color: #8B1A3A;
+}
+
+.faqItemOpen .faqChevron {
+  transform: rotate(180deg);
+}
+
+.faqBody {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, padding 0.3s ease;
+}
+
+.faqItemOpen .faqBody {
+  max-height: 500px;
+  padding: 0 24px 20px;
+}
+
+.faqAnswer {
+  font-size: 14px;
+  color: #6B6B6B;
+  line-height: 1.7;
+}
+
+/* 6. Footer (Reuse styles) */
+.footer {
+  background-color: #1A1C2E;
+  padding: 48px 80px 24px 80px;
+  color: #FFFFFF;
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  margin-bottom: 48px;
+}
+
+.footerColHead {
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  opacity: 0.5;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.footerBrand {
+  font-family: 'Poppins', sans-serif;
+  color: #C9A84C;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.footerBrandText {
+  font-size: 13px;
+  opacity: 0.7;
+  line-height: 1.6;
+}
+
+.footerLinks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footerLinkItem {
+  margin-bottom: 12px;
+}
+
+.footerLink {
+  color: #FFFFFF;
+  font-size: 13px;
+  text-decoration: none;
+  opacity: 0.75;
+  transition: opacity 0.2s;
+}
+
+.footerLink:hover {
+  opacity: 1;
+}
+
+.footerContact {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footerContactItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  opacity: 0.75;
+}
+
+.footerIcon {
+  color: #C9A84C;
+}
+
+.footerBottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 24px;
+  text-align: center;
+}
+
+.footerCopyright {
+  font-size: 12px;
+  opacity: 0.5;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .pricingSection {
+    flex-direction: column;
+    padding: 0 40px 72px;
+  }
+  .card {
+    width: 100%;
+    max-width: 400px;
+  }
+  .premiumCard {
+    transform: none;
+  }
+  .premiumCard:hover {
+    transform: translateY(-4px);
+  }
+  .trustSection {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+  .footerGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .headerSection, .pricingSection, .comparisonSection, .trustSection, .faqSection, .footer {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .footerGrid {
+    grid-template-columns: 1fr;
+  }
+}

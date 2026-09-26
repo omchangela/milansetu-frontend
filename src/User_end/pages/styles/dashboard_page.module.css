@@ -1,0 +1,643 @@
+.dashboardContainer {
+  display: flex;
+  min-height: 100vh;
+  background-color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  width: 300px;
+  background-color: #F8F4EF;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 20px;
+  border-right: 1px solid #e0e0e0;
+  position: fixed;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.logoBlock {
+  margin-bottom: 40px;
+}
+
+.logoText {
+  color: #800000; /* Maroon */
+  font-family: serif;
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 4px;
+}
+
+.logoTagline {
+  color: #B8860B; /* Gold/Tan */
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.navList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  margin-bottom: 5px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #555;
+  transition: all 0.3s ease;
+}
+
+.navItem:hover {
+  background-color: #f0ebe4;
+}
+
+.activeNavItem {
+  background-color: #FADADD; /* Light Mauve/Pink */
+  color: #800000;
+  border-left: 4px solid #800000;
+  font-weight: bold;
+}
+
+.navIcon {
+  margin-right: 15px;
+  width: 20px;
+}
+
+.sidebarBottom {
+  margin-top: auto;
+}
+
+.currentPlanCard {
+  background-color: #4A0E0E; /* Dark Maroon */
+  padding: 20px;
+  border-radius: 12px;
+  color: white;
+}
+
+.planLabel {
+  font-size: 12px;
+  color: #ccc;
+  margin-bottom: 4px;
+}
+
+.planName {
+  font-weight: bold;
+  color: #FFD700; /* Gold */
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.upgradeBtn {
+  background-color: #FFD700;
+  color: #4A0E0E;
+  border: none;
+  padding: 10px;
+  border-radius: 20px;
+  width: 100%;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Main Content Styles */
+.mainContent {
+  flex-grow: 1;
+  margin-left: 300px;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+/* Top Bar Styles */
+.topBar {
+  background-color: white;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.searchContainer {
+  display: flex;
+  align-items: center;
+  background-color: #f2f2f2;
+  border-radius: 25px;
+  padding: 8px 15px;
+  width: 350px;
+}
+
+.searchIcon {
+  color: #888;
+  margin-right: 10px;
+}
+
+.searchInput {
+  border: none;
+  background: transparent;
+  width: 100%;
+  outline: none;
+  font-size: 14px;
+}
+
+.topBarActions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.iconBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+}
+
+.userBlock {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.userInfo {
+  text-align: right;
+}
+
+.userName {
+  font-weight: bold;
+  font-size: 14px;
+  display: block;
+}
+
+.userRole {
+  color: #B8860B;
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #eee;
+  object-fit: cover;
+}
+
+/* Dashboard Body Styles */
+.dashboardBody {
+  padding: 30px;
+}
+
+.heroBanner {
+  background: linear-gradient(135deg, #4A0E0E 0%, #800000 100%);
+  border-radius: 15px;
+  padding: 40px;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.heroBanner::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: radial-gradient(circle at top right, rgba(255,255,255,0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.heroHeading {
+  font-family: serif;
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.heroSubtext {
+  font-size: 16px;
+  color: #e0e0e0;
+  max-width: 600px;
+  line-height: 1.5;
+  margin-bottom: 25px;
+}
+
+.heroCta {
+  background-color: #FFD700;
+  color: #4A0E0E;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  width: fit-content;
+}
+
+/* Stats Row Styles */
+.statsRow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.statCard {
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.statLabel {
+  font-size: 12px;
+  color: #888;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.statValue {
+  font-family: serif;
+  font-size: 28px;
+  color: #800000;
+  margin-top: 10px;
+}
+
+.statIconContainer {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: #FFF0F5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FF69B4;
+}
+
+/* Analytics Section Styles */
+.analyticsSection {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.analyticsCard {
+  background-color: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  flex: 0 0 65%;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.cardTitle {
+  font-family: serif;
+  font-size: 18px;
+  color: #333;
+}
+
+.cardSubtitle {
+  font-size: 12px;
+  color: #888;
+  margin-top: 4px;
+}
+
+.filterDropdown {
+  background-color: #f2f2f2;
+  padding: 6px 12px;
+  border-radius: 15px;
+  font-size: 12px;
+  color: #555;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.chartContainer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 200px;
+  padding-top: 50px;
+}
+
+.barWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 0 100px;
+}
+
+.bar {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.barSegment {
+  width: 100%;
+}
+
+.segment1 { background-color: #FADADD; } /* Light Pink/Lavender */
+.segment2 { background-color: #AF8FA0; } /* Dusty Mauve */
+.segment3 { background-color: #800000; } /* Deep Maroon */
+
+.barLabel {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #888;
+}
+
+/* Profile Strength Styles */
+.strengthCard {
+  background-color: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.progressContainer {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin-bottom: 20px;
+}
+
+.progressRing {
+  width: 100%;
+  height: 100%;
+}
+
+.progressText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.percentValue {
+  display: block;
+  font-family: serif;
+  font-size: 24px;
+  color: #800000;
+  line-height: 1;
+}
+
+.percentLabel {
+  font-size: 10px;
+  color: #888;
+}
+
+.strengthDesc {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+
+.completeProfileBtn {
+  background-color: transparent;
+  border: 1px solid #FFD700;
+  color: #800000;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.badgeRow {
+  display: flex;
+  gap: 15px;
+}
+
+.badgeIcon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.verifiedBadge { background-color: #800000; }
+.workBadge { background-color: #B8860B; }
+.securityBadge { background-color: #6A5ACD; }
+
+/* Top Picks Styles */
+.topPicksHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.sectionTitle {
+  font-family: serif;
+  font-size: 24px;
+  color: #333;
+}
+
+.viewAllLink {
+  color: #800000;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.profileGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.profileCard {
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.imageSection {
+  position: relative;
+  height: 300px;
+}
+
+.profilePhoto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.imageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, transparent 20%, transparent 80%, rgba(0,0,0,0.6) 100%);
+}
+
+.matchBadge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.starIcon { color: #FFD700; }
+
+.verifiedTag {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  background-color: rgba(0,0,0,0.6);
+  color: white;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.watermark {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  color: rgba(255,255,255,0.4);
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.uiIcons {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.uiIcon {
+  width: 24px;
+  height: 24px;
+  background-color: rgba(255,255,255,0.2);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.cardDetails {
+  padding: 20px;
+}
+
+.profileNameAge {
+  font-family: serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 5px;
+}
+
+.profileLocation {
+  font-size: 12px;
+  color: #777;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
+.actionRow {
+  display: flex;
+  gap: 10px;
+}
+
+.sendInterestBtn {
+  background-color: #800000;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  flex-grow: 1;
+  cursor: pointer;
+}
+
+.viewBtn {
+  background-color: transparent;
+  border: 1px solid #FFD700;
+  color: #333;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* Footer Styles */
+.dashboardFooter {
+  margin-top: 50px;
+  padding: 20px 0;
+  border-top: 1px solid #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  color: #888;
+  font-size: 12px;
+}
+
+.divider {
+  width: 1px;
+  height: 12px;
+  background-color: #ccc;
+}

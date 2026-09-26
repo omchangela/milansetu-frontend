@@ -1,0 +1,313 @@
+.container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #FAF3EE;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Sidebar Custom Content for Logout Page */
+.sidebarHeader {
+  padding: 30px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.starBadge {
+  width: 36px;
+  height: 36px;
+  background-color: #C9A84C;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.brandName {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #6B1F3A;
+}
+
+.eliteSubtitle {
+  font-size: 10px;
+  font-weight: 700;
+  color: #9A8F8F;
+  letter-spacing: 1px;
+}
+
+.upgradePillBtn {
+  width: 100%;
+  background: linear-gradient(to right, #C9A84C, #A07830);
+  color: #fff;
+  border: none;
+  border-radius: 24px;
+  padding: 12px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.logoutLinkRed {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #C0392B;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  justify-content: center;
+}
+
+/* Main Layout Area (Full Bleed BG) */
+.mainLayout {
+  flex: 1;
+  margin-left: 260px; /* Sidebar width */
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-image: url('../../../assets/User_end_assets/hero_bg.png'); /* Reusing existing asset */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(250, 243, 238, 0.4); /* warm beige/sepia overlay */
+  z-index: 1;
+}
+
+/* Top Navbar (Transparent background) */
+.topNavbar {
+  height: 70px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.logoNavText {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1A1A1A;
+}
+
+.searchPill {
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid #D1D1D1;
+  border-radius: 24px;
+  padding: 8px 16px;
+  width: 240px;
+  gap: 10px;
+}
+
+.searchIcon { color: #7A7A7A; }
+.searchInput {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 14px;
+  width: 100%;
+}
+
+.navActions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.actionIcon {
+  color: #3D3D3D;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.userAvatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Center Modal Card */
+.modalContainer {
+  position: relative;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  padding: 40px;
+}
+
+.logoutCard {
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 480px;
+  padding: 40px 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.cardBrand {
+  font-family: 'Poppins', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  font-style: italic;
+  color: #6B1F3A;
+  margin-bottom: 24px;
+}
+
+.iconWrapper {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.logoutCircle {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 2px solid #C9A84C;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6B1F3A;
+}
+
+.checkBadge {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 16px;
+  height: 16px;
+  background-color: #6B1F3A;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #fff;
+}
+
+.headingText {
+  font-family: 'Poppins', sans-serif;
+  font-size: 26px;
+  color: #1A1A1A;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 16px;
+}
+
+.headingName {
+  color: #8B1A3A;
+  font-style: italic;
+}
+
+.subtext {
+  font-size: 14px;
+  color: #666666;
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+.primaryBtn {
+  width: 100%;
+  background-color: #8B1A3A;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 16px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  transition: opacity 0.2s;
+}
+
+.primaryBtn:hover {
+  opacity: 0.9;
+}
+
+.secondaryLink {
+  color: #8B1A3A;
+  font-size: 13px;
+  text-decoration: none;
+  margin-bottom: 32px;
+  font-weight: 600;
+}
+
+.secondaryLink:hover {
+  text-decoration: underline;
+}
+
+.safetyBanner {
+  background-color: #FDF6EE;
+  border: 1px solid #E8D5B0;
+  border-radius: 8px;
+  padding: 12px 16px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.shieldIcon {
+  color: #C9A84C;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.safetyText {
+  font-size: 12px;
+  color: #555555;
+  line-height: 1.5;
+}
+
+.safetyBold {
+  color: #6B1F3A;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .mainLayout { margin-left: 0; }
+  .logoutCard { padding: 32px 24px; }
+  .headingText { font-size: 22px; }
+}

@@ -1,0 +1,597 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 480px;
+  background-color: #FAF7F2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.heroBg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  z-index: 0;
+}
+
+/* Light cream wash overlay — image shows through faintly */
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(250, 247, 242, 0.82);
+  z-index: 1;
+}
+
+/* Top/bottom fade into page bg */
+.hero::before,
+.hero::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.hero::before {
+  top: 0;
+  background: linear-gradient(to bottom, #FAF7F2 0%, transparent 100%);
+}
+
+.hero::after {
+  bottom: 0;
+  background: linear-gradient(to top, #FAF7F2 0%, transparent 100%);
+}
+
+.heroContent {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  max-width: 900px;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.eyebrow {
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #C9A04E;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.mainHeading {
+  font-family: 'Poppins', sans-serif;
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0 0 24px 0;
+}
+
+.headingMaroon {
+  color: #7A1F3D;
+}
+
+.headingGold {
+  color: #C9A04E;
+  font-weight: 600;
+}
+
+.description {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #6B5B52;
+  line-height: 1.75;
+  max-width: 580px;
+  margin: 0;
+  text-align: center;
+}
+
+.placeholderSection {
+  padding: 80px 24px;
+  background: #FFFFFF;
+  text-align: center;
+}
+
+/* ─── Leadership Team Section ─── */
+.teamSection {
+  width: 100%;
+  padding: 80px 0;
+  background: #FAF7F2;
+  display: flex;
+  justify-content: center;
+}
+
+.teamContainer {
+  width: 1360px;
+  max-width: 100%;
+  padding: 0 40px;
+}
+
+.teamHeader {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.teamEyebrow {
+  display: block;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #C9A04E;
+  margin-bottom: 12px;
+}
+
+.teamMainHeading {
+  font-family: 'Poppins', sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  color: #7A1F3D;
+  margin: 0;
+}
+
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.teamCard {
+  background: #FFFFFF;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.teamImageWrapper {
+  width: 100%;
+  height: 355px;
+  overflow: hidden;
+}
+
+.teamImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.teamCard:hover .teamImage {
+  transform: scale(1.03);
+}
+
+.teamContent {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.teamName {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #7A1F3D;
+  margin: 0 0 6px 0;
+}
+
+.teamRole {
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #C9A04E;
+  line-height: 1.4;
+  margin: 0 0 14px 0;
+}
+
+.teamBio {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: #5A5A5A;
+  line-height: 1.7;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .teamGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .teamGrid {
+    grid-template-columns: 1fr;
+  }
+  .teamSection {
+    padding: 60px 0;
+  }
+}
+
+/* ─── Mission & Vision Section ─── */
+.mvSection {
+  width: 100%;
+  padding: 80px 0;
+  background: #FAF7F2;
+  display: flex;
+  justify-content: center;
+}
+
+.mvContainer {
+  width: 1360px;
+  max-width: 100%;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.mvCard {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 48px 40px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+  min-height: 330px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.mvCard:hover {
+  transform: translateY(-5px);
+}
+
+.mvIconCircle {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.mvIconCircle svg {
+  width: 24px;
+  height: 24px;
+}
+
+.missionIconBg {
+  background: #7A1F3D;
+}
+
+.visionIconBg {
+  background: #C9A04E;
+}
+
+.mvTitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  color: #7A1F3D;
+  margin: 0 0 16px 0;
+}
+
+.mvBody {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #6B6B6B;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .mvContainer {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .mvCard {
+    padding: 36px 28px;
+    min-height: auto;
+  }
+}
+
+/* ─── Our Journey Section ─── */
+.journeySection {
+  width: 100%;
+  min-height: 860px;
+  padding: 80px 0;
+  background: #FAF7F2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.journeyContainer {
+  width: 1360px;
+  max-width: 100%;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+}
+
+.journeyLeft {
+  width: 45%;
+  position: relative;
+  display: flex;
+}
+
+.accentBorder {
+  width: 4px;
+  height: 480px;
+  background: #C9A04E;
+  flex-shrink: 0;
+}
+
+.journeyContent {
+  padding-left: 24px;
+}
+
+.journeyEyebrow {
+  display: block;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #C9A04E;
+  margin-bottom: 16px;
+}
+
+.journeyHeading {
+  font-family: 'Poppins', sans-serif;
+  font-size: 34px;
+  font-weight: 800;
+  color: #7A1F3D;
+  line-height: 1.3;
+  margin: 0 0 28px 0;
+}
+
+.journeyParagraph {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #5A5A5A;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.journeyRight {
+  width: 55%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.journeyImageWrapper {
+  position: relative;
+  width: 655px;
+  height: 645px;
+}
+
+.journeyImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 24px;
+  border-top-left-radius: 48px; /* Pronounced top-left */
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+}
+
+.quoteCard {
+  position: absolute;
+  bottom: -30px;
+  right: -30px;
+  width: 240px;
+  background: #7A1F3D;
+  border-radius: 12px;
+  padding: 24px 32px;
+  box-shadow: 0 10px 30px rgba(122, 31, 61, 0.3);
+  z-index: 2;
+}
+
+.quoteText {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  font-style: italic;
+  color: #FFFFFF;
+  margin: 0 0 6px 0;
+}
+
+.quoteSublabel {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #E0B8C5; /* light pink/muted */
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .journeyContainer {
+    flex-direction: column;
+    gap: 60px;
+  }
+  .journeyLeft, .journeyRight {
+    width: 100%;
+  }
+  .journeyImageWrapper {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
+  }
+  .quoteCard {
+    right: 0;
+    bottom: -20px;
+  }
+}
+
+/* ─── Trust Stats Section ─── */
+.statsSection {
+  width: 100%;
+  padding: 30px 0;
+  background: #FFFFFF;
+  display: flex;
+  justify-content: center;
+}
+
+.statsContainer {
+  width: 1360px;
+  max-width: 100%;
+  padding: 0 40px;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.statCard {
+  height: 200px;
+  padding: 36px 32px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-radius: 4px; /* Minimal radius per spec */
+}
+
+.statIcon {
+  position: absolute;
+  top: 28px;
+  right: 28px;
+  width: 32px;
+  height: 32px;
+}
+
+.statIcon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.statNumber {
+  font-size: 42px;
+  font-weight: 800;
+  margin-bottom: 12px;
+  line-height: 1;
+}
+
+.statLabel {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.statUnderline {
+  position: absolute;
+  bottom: 28px;
+  left: 32px;
+  width: 40px;
+  height: 3px;
+}
+
+/* White Card Variant */
+.statCardwhite {
+  background: #FAFAFA;
+}
+
+.statCardwhite .statNumber {
+  color: #7A1F3D;
+}
+
+.statCardwhite .statLabel {
+  color: #C9A04E;
+}
+
+.statCardwhite .statIcon {
+  color: #D5D5D5;
+}
+
+.statCardwhite .statUnderline {
+  background: #C9A04E;
+}
+
+/* Navy Card Variant */
+.statCardnavy {
+  background: #0F1A30;
+}
+
+.statCardnavy .statNumber {
+  color: #C9A04E;
+}
+
+.statCardnavy .statLabel {
+  color: #D8DCE5;
+}
+
+.statCardnavy .statIcon {
+  color: #2A3550;
+}
+
+.statCardnavy .statUnderline {
+  background: #FFFFFF;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .statsGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .statCard {
+    height: auto;
+    min-height: 180px;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    height: 450px;
+  }
+  .mainHeading {
+    font-size: 32px;
+  }
+  .description {
+    font-size: 15px;
+  }
+}

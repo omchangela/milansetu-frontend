@@ -1,0 +1,284 @@
+.section {
+  width: 100%;
+  padding: 80px 0;
+  background: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  width: 1360px;
+  max-width: 100%;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 800;
+  color: #0F1A33;
+  letter-spacing: -0.5px;
+  margin: 0 0 48px 0;
+  text-align: center;
+}
+
+.titleAccent {
+  color: #C9A04E;
+}
+
+.grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  align-items: center;
+}
+
+.cardWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card {
+  border-radius: 16px;
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+}
+
+.cardHeader {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.planName {
+  font-size: 22px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.planSubtitle {
+  display: block;
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #8A8A8A;
+  margin-top: 8px;
+}
+
+.priceBlock {
+  text-align: center;
+  margin: 24px 0;
+}
+
+.price {
+  font-size: 42px;
+  font-weight: 800;
+  color: #0F1A33;
+}
+
+.duration {
+  font-size: 16px;
+  font-weight: 400;
+  color: #8A8A8A;
+}
+
+.featureList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px 0;
+  flex-grow: 1;
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  color: #3A3A3A;
+  margin-bottom: 16px;
+}
+
+.checkCircle {
+  width: 18px;
+  height: 18px;
+  border: 1.5px solid currentColor;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.checkCircle svg {
+  width: 10px;
+  height: 10px;
+}
+
+.button {
+  width: 100%;
+  height: 48px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: auto;
+}
+
+/* ─── Basic Card ─────────────────────────────────────────── */
+.basicCard {
+  background: #F5F5F5;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+}
+
+.basicCard .planName {
+  color: #1A1A2E;
+}
+
+.basicCard .checkCircle {
+  color: #7A1F3D;
+}
+
+.basicCard .button {
+  background: #FFFFFF;
+  border: 1px solid #1A1A2E;
+  color: #1A1A2E;
+}
+
+.basicCard .button:hover {
+  background: #1A1A2E;
+  color: #FFFFFF;
+}
+
+/* ─── Premium Card ───────────────────────────────────────── */
+.premiumWrapper {
+  transform: translateY(-10px);
+}
+
+.premiumCard {
+  background: #FFFFFF;
+  border: 1.5px solid #C9A04E;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.premiumCard .button {
+  height: 52px;
+  background: #7A1F3D;
+  border: none;
+  color: #FFFFFF;
+  box-shadow: 0 8px 16px rgba(122,31,61,0.3);
+}
+
+.premiumCard .button:hover {
+  background: #5a172d;
+  transform: translateY(-2px);
+}
+
+.premiumCard .checkCircle {
+  color: #C9A04E;
+}
+
+.badge {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #C9A04E;
+  color: #1A1A2E;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  padding: 6px 20px;
+  border-radius: 20px;
+  white-space: nowrap;
+  z-index: 3;
+}
+
+.shadowCard {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 100%;
+  height: 100%;
+  background: #ECECEC;
+  border-radius: 16px;
+  z-index: 1;
+}
+
+/* ─── Elite Card ─────────────────────────────────────────── */
+.eliteCard {
+  background: #0F1A30;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.eliteCard .planName {
+  color: #C9A04E;
+}
+
+.eliteCard .planSubtitle {
+  color: #B8BCC8;
+}
+
+.eliteCard .price {
+  color: #FFFFFF;
+}
+
+.eliteCard .duration {
+  color: #8A93A8;
+}
+
+.eliteCard .featureItem {
+  color: #D8DCE5;
+}
+
+.eliteCard .checkCircle {
+  color: #C9A04E;
+}
+
+.eliteCard .button {
+  background: transparent;
+  border: 1px solid #C9A04E;
+  color: #C9A04E;
+}
+
+.eliteCard .button:hover {
+  background: #C9A04E;
+  color: #0F1A30;
+}
+
+/* ─── Responsive ─────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .premiumWrapper {
+    transform: none;
+  }
+  .container {
+    padding: 0 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .section {
+    padding: 60px 0;
+  }
+  .card {
+    padding: 32px 24px;
+  }
+}

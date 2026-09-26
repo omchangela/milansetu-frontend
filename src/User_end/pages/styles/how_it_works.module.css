@@ -1,0 +1,146 @@
+.section {
+  width: 100%;
+  padding: 96px 0;
+  background: #0A1128;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 1440px;
+  max-width: 100%;
+  padding: 0 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
+}
+
+.header {
+  max-width: 672px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}
+
+.journeyText {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 1.6px;
+  color: #C89B3C;
+  text-transform: uppercase;
+}
+
+.title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+.subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #E2E2E2;
+  opacity: 0.8;
+  margin: 0;
+  padding-top: 8px;
+}
+
+.stepsGrid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 48px;
+  row-gap: 48px;
+}
+
+.stepCard {
+  width: 284px;
+  height: 191px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}
+
+.iconWrapper {
+  width: 80px;
+  height: 80px;
+}
+
+.iconCircle {
+  width: 100%;
+  height: 100%;
+  background: rgba(200, 155, 60, 0.1); /* #C89B3C1A */
+  border: 1px solid rgba(200, 155, 60, 0.3); /* #C89B3C4D */
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.stepCard:hover .iconCircle {
+  background: rgba(200, 155, 60, 0.2);
+  border-color: #C89B3C;
+  transform: translateY(-4px);
+}
+
+.iconCircle svg {
+  width: 27.5px;
+  height: 20px;
+}
+
+.stepTitle {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #C89B3C;
+  margin: 0;
+  padding-top: 16px;
+}
+
+.stepDescription {
+  width: 243px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 19.5px;
+  color: #E2E2E2;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .stepsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+  .container {
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .stepsGrid {
+    grid-template-columns: 1fr;
+  }
+  .section {
+    padding: 64px 0;
+  }
+  .title {
+    font-size: 28px;
+  }
+}

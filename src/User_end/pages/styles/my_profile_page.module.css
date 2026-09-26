@@ -1,0 +1,921 @@
+.dashboardContainer {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Sidebar Styles (matching Dashboard width) */
+.sidebar {
+  width: 300px;
+  background-color: #F8F4EF;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 20px;
+  border-right: 1px solid #e0e0e0;
+  position: fixed;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.logoBlock {
+  margin-bottom: 40px;
+}
+
+.logoText {
+  color: #800000;
+  font-family: serif;
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 4px;
+}
+
+.logoTagline {
+  color: #B8860B;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.navList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  margin-bottom: 5px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #555;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.navItem:hover {
+  background-color: #f0ebe4;
+}
+
+.activeNavItem {
+  background-color: #FADADD;
+  color: #800000;
+  border-left: 4px solid #800000;
+  font-weight: bold;
+}
+
+.navIcon {
+  margin-right: 15px;
+  width: 20px;
+}
+
+.sidebarBottom {
+  margin-top: auto;
+}
+
+.membershipBlock {
+  padding: 15px;
+  border-radius: 12px;
+  background-color: rgba(128, 0, 0, 0.05);
+  margin-bottom: 20px;
+}
+
+.memberLevel {
+  display: block;
+  font-weight: bold;
+  color: #800000;
+  font-size: 14px;
+}
+
+.memberStatus {
+  display: block;
+  color: #777;
+  font-size: 11px;
+  margin-bottom: 12px;
+}
+
+.upgradeBtn {
+  background-color: #FFD700;
+  color: #4A0E0E;
+  border: none;
+  padding: 8px;
+  border-radius: 20px;
+  width: 100%;
+  font-weight: bold;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.miniNav {
+  display: flex;
+  gap: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.miniNavItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #777;
+  cursor: pointer;
+}
+
+/* Main Content Styles */
+.mainContent {
+  flex-grow: 1;
+  margin-left: 300px;
+  padding: 0;
+}
+
+/* Top Bar Styles */
+.topBar {
+  background-color: white;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.searchContainer {
+  display: flex;
+  align-items: center;
+  background-color: #f2f2f2;
+  border-radius: 25px;
+  padding: 8px 15px;
+  width: 350px;
+}
+
+.searchIcon {
+  color: #888;
+  margin-right: 10px;
+}
+
+.searchInput {
+  border: none;
+  background: transparent;
+  width: 100%;
+  outline: none;
+  font-size: 14px;
+}
+
+.topBarActions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.iconBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+}
+
+.userBlock {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.userInfo {
+  text-align: right;
+}
+
+.userName {
+  font-weight: bold;
+  font-size: 14px;
+  display: block;
+}
+
+.userRole {
+  color: #B8860B;
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #eee;
+  object-fit: cover;
+}
+
+/* Profile Header Card */
+.profileBody {
+  padding: 30px;
+}
+
+.profileHeaderCard {
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  margin-bottom: 30px;
+}
+
+.bannerStrip {
+  height: 120px;
+  background-color: #4A0E0E;
+}
+
+.headerContent {
+  padding: 0 30px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.profileInfoWrapper {
+  display: flex;
+  gap: 25px;
+  align-items: flex-end;
+}
+
+.photoContainer {
+  position: relative;
+  margin-top: -60px;
+}
+
+.profilePhoto {
+  width: 150px;
+  height: 150px;
+  border-radius: 15px;
+  border: 5px solid white;
+  object-fit: cover;
+  background-color: #eee;
+}
+
+.verifiedBadge {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  background-color: white;
+  color: #007bff;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.nameBadgeRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.profileName {
+  font-family: serif;
+  font-size: 28px;
+  color: #333;
+  margin: 0;
+}
+
+.memberBadge {
+  background-color: #F8F4EF;
+  color: #4A0E0E;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 4px 12px;
+  border-radius: 15px;
+}
+
+.metaLine {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #777;
+  font-size: 14px;
+}
+
+.headerActions {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.editBtn {
+  background-color: #800000;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.shareBtn {
+  background-color: white;
+  color: #333;
+  border: 1px solid #ddd;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+/* Tab Navigation */
+.tabBar {
+  background-color: white;
+  display: flex;
+  padding: 0 30px;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 30px;
+}
+
+.tab {
+  padding: 15px 20px;
+  font-size: 14px;
+  color: #777;
+  cursor: pointer;
+  position: relative;
+  font-weight: 500;
+  background: none;
+  border: none;
+  font-family: inherit;
+}
+
+.tab:focus-visible {
+  outline: 2px solid #800000;
+  outline-offset: -2px;
+}
+
+.activeTab {
+  color: #800000;
+}
+
+.activeTab::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: #800000;
+}
+
+/* Info Grid Layout */
+.infoGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.fullWidth {
+  grid-column: span 2;
+}
+
+/* Card Common Styles */
+.infoCard {
+  background-color: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.iconCircle {
+  width: 40px;
+  height: 40px;
+  background-color: #FFF0F5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FF69B4;
+}
+
+.cardTitle {
+  font-family: serif;
+  font-size: 18px;
+  color: #333;
+  margin: 0;
+}
+
+/* Personal Details Card */
+.fieldGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.fieldLabel {
+  font-size: 11px;
+  color: #888;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.fieldValue {
+  background-color: #f8f8f8;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Ideal Partner Card (Dark) */
+.darkCard {
+  background-color: #4A0E0E;
+  color: white;
+}
+
+.darkCard .cardTitle {
+  color: white;
+}
+
+.prefRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  padding-bottom: 10px;
+}
+
+.prefLabel {
+  color: #aaa;
+  font-size: 13px;
+}
+
+.prefValue {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.updatePrefBtn {
+  margin-top: 15px;
+  background-color: #B8860B; /* Olive/Gold */
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  width: 100%;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Family Info Card */
+.subBoxGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.subBox {
+  background-color: #f8f8f8;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+.subBoxLabel {
+  display: block;
+  font-size: 10px;
+  color: #888;
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
+}
+
+.subField {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.subFieldInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.subFieldLabel {
+  font-size: 12px;
+  color: #777;
+}
+
+.subFieldValue {
+  font-weight: bold;
+  font-size: 13px;
+  color: #333;
+}
+
+/* Career Card */
+.careerCard {
+  background-color: #FFFDF5;
+}
+
+.goldCircle {
+  background-color: #FFD700;
+  color: white;
+}
+
+.careerItem {
+  margin-bottom: 20px;
+}
+
+.careerTitle {
+  display: block;
+  font-weight: bold;
+  font-size: 15px;
+  color: #333;
+}
+
+.careerSubtitle {
+  display: block;
+  font-size: 13px;
+  color: #777;
+}
+
+.divider {
+  height: 1px;
+  background-color: #eee;
+  margin: 20px 0;
+}
+
+.incomeRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.incomeValue {
+  color: #800000;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Horoscope Card */
+.cardHeaderFull {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  width: 100%;
+}
+
+.badgeRow {
+  display: flex;
+  gap: 10px;
+}
+
+.pinkPill {
+  background-color: #FFF0F5;
+  color: #DB7093;
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.outlinePill {
+  border: 1px solid #ddd;
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-size: 12px;
+  color: #555;
+  cursor: pointer;
+}
+
+.dataRow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.dataItem {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Footer */
+.profileFooter {
+  margin-top: 50px;
+  background-color: white;
+  padding: 40px;
+  border-top: 1px solid #eee;
+}
+
+.footerInner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footerWordmark {
+  font-family: serif;
+  color: #800000;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.copyright {
+  font-size: 12px;
+  color: #888;
+}
+
+.footerLinks {
+  display: flex;
+  gap: 20px;
+}
+
+.footerLink {
+  text-decoration: none;
+  color: #777;
+  font-size: 13px;
+}
+
+.footerLink:hover {
+  color: #800000;
+}
+
+/* ── API error banner ──────────────────────────────────────────────────────── */
+.apiError {
+  background: #fff0f0;
+  color: #c0392b;
+  border: 1px solid #e88;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+/* ── Edit Profile Modal ────────────────────────────────────────────────────── */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modalCard {
+  background: #fff;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 620px;
+  max-height: 88vh;
+  overflow-y: auto;
+  padding: 28px 32px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+}
+
+.modalHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.modalTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.modalClose {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #666;
+  display: flex;
+  padding: 4px;
+}
+
+.modalForm {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.modalField {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.modalLabel {
+  font-size: 12px;
+  font-weight: 600;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.modalInput {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 9px 12px;
+  font-size: 14px;
+  color: #1a1a1a;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.modalInput:focus {
+  border-color: #800000;
+}
+
+.modalActions {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.cancelBtn {
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  color: #555;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.saveProfileBtn {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 22px;
+  background: #800000;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.saveProfileBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Photo Gallery */
+.photoGalleryGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.photoGalleryItem {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #eee;
+  background: #fafafa;
+}
+
+.photoGalleryImg {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  display: block;
+}
+
+.photoGalleryLabel {
+  display: block;
+  padding: 8px 10px;
+  font-size: 12px;
+  color: #666;
+  text-align: center;
+}
+
+.photoGalleryHint {
+  margin-top: 16px;
+  font-size: 13px;
+  color: #888;
+}
+
+.photoGalleryToolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.photoGalleryCount {
+  font-size: 13px;
+  color: #555;
+}
+
+.photoGalleryPremiumNote {
+  color: #888;
+}
+
+.photoGalleryFileInput {
+  display: none;
+}
+
+.photoGalleryUploadBtn {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  background: #8b1538;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.photoGalleryUploadBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.photoGalleryError {
+  margin-top: 12px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: #fff0f0;
+  color: #b00020;
+  font-size: 13px;
+}
+
+.photoGalleryItemFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 8px 10px;
+}
+
+.photoGallerySetBtn {
+  flex: 1;
+  padding: 4px 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #fff;
+  font-size: 11px;
+  color: #8b1538;
+  cursor: pointer;
+}
+
+.photoGallerySetBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.photoGalleryDeleteBtn {
+  width: 28px;
+  height: 28px;
+  border: none;
+  border-radius: 6px;
+  background: #f5f5f5;
+  color: #666;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.photoGalleryDeleteBtn:hover {
+  background: #fee;
+  color: #c00;
+}
+
+.photoGalleryStatus {
+  display: block;
+  padding: 0 10px 8px;
+  font-size: 11px;
+  color: #b8860b;
+  text-align: center;
+}

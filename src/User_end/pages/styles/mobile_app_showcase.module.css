@@ -1,0 +1,225 @@
+.section {
+  width: 100%;
+  min-height: 650px;
+  padding: 100px 0;
+  background: #7A1F3D;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+}
+
+.container {
+  width: 1360px;
+  max-width: 100%;
+  padding: 0 80px;
+  display: flex;
+  align-items: center;
+}
+
+.leftColumn {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.heading {
+  font-size: 48px;
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1.2;
+  margin: 0 0 24px 0;
+}
+
+.description {
+  font-size: 17px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.7); /* #D9B8C3 equivalent */
+  line-height: 1.7;
+  max-width: 480px;
+  margin: 0 0 32px 0;
+}
+
+.buttonStack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.appButton {
+  width: 200px;
+  height: 64px;
+  background: #000000;
+  border-radius: 8px;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.appButton:hover {
+  transform: scale(1.02);
+}
+
+.appIcon {
+  width: 28px;
+  height: 28px;
+  color: #FFFFFF;
+}
+
+.appTextStack {
+  display: flex;
+  flex-direction: column;
+}
+
+.appSubtext {
+  font-size: 10px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #B0B0B0;
+  line-height: 1;
+}
+
+.appMaintext {
+  font-size: 18px;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.2;
+}
+
+.rightColumn {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+}
+
+.frame {
+  width: 360px;
+  height: 360px;
+  background: #F5F2EE;
+  border: 10px solid #0F1A30;
+  border-radius: 40px;
+  transform: rotate(-8deg);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.phoneMockup {
+  width: 180px;
+  height: 380px;
+  background: #000000;
+  border-radius: 28px;
+  padding: 8px;
+  transform: rotate(8deg); /* Counter-rotate to stay upright */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  position: absolute;
+}
+
+.phoneScreen {
+  width: 100%;
+  height: 100%;
+  background: #FFFFFF;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* ─── Mockup UI ─── */
+.mockupUI {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.mockupProfile {
+  width: 100%;
+  height: 180px;
+  background: #e0e0e0 url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80');
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+.mockupName {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1A1A2E;
+  margin-bottom: 4px;
+}
+
+.mockupMatch {
+  font-size: 12px;
+  font-weight: 600;
+  color: #C9A04E;
+  margin-bottom: 16px;
+}
+
+.mockupActions {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+}
+
+.mockupDecline {
+  flex: 1;
+  height: 32px;
+  background: #f0f0f0;
+  border-radius: 6px;
+}
+
+.mockupConnect {
+  flex: 1;
+  height: 32px;
+  background: #7A1F3D;
+  border-radius: 6px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+    padding: 0 40px;
+    gap: 80px;
+  }
+  .leftColumn, .rightColumn {
+    width: 100%;
+    align-items: center;
+  }
+  .description {
+    max-width: 100%;
+  }
+  .frame {
+    width: 300px;
+    height: 300px;
+  }
+  .phoneMockup {
+    width: 150px;
+    height: 320px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 60px 0;
+  }
+  .heading {
+    font-size: 36px;
+  }
+  .container {
+    padding: 0 24px;
+  }
+}

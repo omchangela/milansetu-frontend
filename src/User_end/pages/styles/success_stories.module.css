@@ -1,0 +1,147 @@
+.section {
+  width: 100%;
+  padding: 96px 0;
+  background: #FDFBF7;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 1440px;
+  max-width: 100%;
+  padding: 0 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.mainQuote {
+  max-width: 1079px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 32px;
+  line-height: 48px;
+  color: #0A1128;
+  text-align: center;
+  margin: 0;
+}
+
+.featuredStory {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.imageSide {
+  width: 546.89px;
+  height: 546.89px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #FFFFFF;
+  box-shadow: 0px 20px 40px rgba(10, 17, 40, 0.05); /* #0A11280D */
+  flex-shrink: 0;
+}
+
+.featuredImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contentSide {
+  flex-grow: 1;
+  padding: 0 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.storyTag {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 1.6px;
+  color: #7A1E3A;
+  text-transform: uppercase;
+}
+
+.testimonial {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 18px;
+  line-height: 29.25px;
+  color: #1A1C1C;
+  margin: 0;
+  max-width: 453px;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-top: 16px;
+}
+
+.divider {
+  width: 48px;
+  height: 1px;
+  background: #C89B3C;
+}
+
+.marriedDate {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #0A1128;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .featuredStory {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .imageSide {
+    width: 100%;
+    max-width: 546px;
+    height: auto;
+    aspect-ratio: 1/1;
+  }
+  .contentSide {
+    padding: 0;
+    align-items: center;
+    text-align: center;
+  }
+  .testimonial {
+    max-width: 100%;
+  }
+  .footer {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 24px;
+    gap: 40px;
+  }
+  .mainQuote {
+    font-size: 24px;
+    line-height: 36px;
+  }
+  .testimonial {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}

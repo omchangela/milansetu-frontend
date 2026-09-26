@@ -1,0 +1,507 @@
+.container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #F7F4F2; /* light ivory-gray */
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Main Content */
+.mainLayout {
+  flex: 1;
+  margin-left: 260px; /* Standard sidebar width */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Top Navbar */
+.topNavbar {
+  height: 70px;
+  background-color: #fff;
+  border-bottom: 1px solid #F0EDEA;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  position: sticky;
+  top: 0;
+  z-index: 90;
+}
+
+.logoText {
+  font-family: 'Poppins', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #6E1E37;
+  text-decoration: none;
+}
+
+.searchPill {
+  display: flex;
+  align-items: center;
+  background-color: #F0EDEA;
+  border-radius: 24px;
+  padding: 8px 16px;
+  width: 320px;
+  gap: 10px;
+}
+
+.searchIcon { color: #7A7A7A; }
+.searchInput {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 14px;
+  width: 100%;
+}
+
+.navActions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.actionIcon {
+  color: #3A3A3A;
+  cursor: pointer;
+}
+
+.userAvatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-left: 10px;
+}
+
+/* Page Body */
+.pageBody {
+  padding: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.titleArea {
+  margin-bottom: 40px;
+}
+
+.pageTitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 34px;
+  font-weight: 700;
+  color: #6E1E37;
+  margin: 0 0 8px 0;
+}
+
+.pageSubtitle {
+  font-size: 14px;
+  font-style: italic;
+  color: #7A7A7A;
+}
+
+.settingsGrid {
+  display: grid;
+  grid-template-columns: 230px 1fr;
+  gap: 40px;
+}
+
+/* Left Sub-nav Panel */
+.subNavPanel {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-self: start;
+}
+
+.subNavItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.subNavActive {
+  background-color: #6E1E37;
+  color: #fff;
+}
+
+.subNavInactive {
+  background-color: transparent;
+  color: #3A3A3A;
+}
+
+.subNavInactive:hover {
+  background-color: #F7F4F2;
+}
+
+/* Right Content Panel */
+.contentStack {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.settingCard {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  position: relative;
+  overflow: hidden;
+}
+
+.topAccent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: #FBE3E8;
+}
+
+.cardHeaderRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.iconCircle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bgPink { background-color: #FBE3E8; color: #6E1E37; }
+.bgGold { background-color: #F5E6C2; color: #C9971F; }
+
+.cardTitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #6E1E37;
+}
+
+/* Setting Rows */
+.settingRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #F0EDEA;
+}
+
+.settingRow:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.rowText {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-width: 70%;
+}
+
+.rowTitle {
+  font-size: 15px;
+  font-weight: 700;
+  color: #3A3A3A;
+}
+
+.rowDesc {
+  font-size: 13px;
+  color: #7A7A7A;
+  line-height: 1.5;
+}
+
+.settingSubLabel {
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.goldLabel { color: #C9971F; }
+.darkLabel { color: #3A3A3A; margin-top: 24px; }
+
+/* Interactive Controls */
+/* Segmented Control */
+.segmentedControl {
+  display: flex;
+  background-color: #3A3A3A;
+  border-radius: 24px;
+  padding: 4px;
+  position: relative;
+}
+
+.segmentBtn {
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  color: #999;
+  z-index: 1;
+}
+
+.segmentActive {
+  background-color: #fff;
+  color: #3A3A3A;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Photo Privacy Radio Cards */
+.radioCardRow {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.radioCard {
+  flex: 1;
+  border: 1px solid #EAE2DD;
+  border-radius: 12px;
+  padding: 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.radioSelected {
+  border: 2px solid #6E1E37;
+  background-color: #FAF3EE;
+}
+
+.radioIndicator {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid #D1D1D1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.indicatorFilled {
+  border-color: #6E1E37;
+}
+
+.indicatorFilled::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background-color: #6E1E37;
+  border-radius: 50%;
+}
+
+.radioIcon {
+  color: #3A3A3A;
+  margin-bottom: 12px;
+}
+
+.radioTitle {
+  font-size: 14px;
+  font-weight: 700;
+  color: #3A3A3A;
+  margin-bottom: 4px;
+}
+
+.radioDesc {
+  font-size: 12px;
+  color: #7A7A7A;
+}
+
+/* Toggle Switches */
+.toggleRowSplit {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.toggleItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  border: 1px solid #F0EDEA;
+  border-radius: 12px;
+}
+
+.toggleInfo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #3A3A3A;
+}
+
+.switch {
+  width: 44px;
+  height: 24px;
+  border-radius: 12px;
+  background-color: #D1D1D1;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.switchOn {
+  background-color: #6E1E37;
+}
+
+.switchKnob {
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.2s;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.switchOn .switchKnob {
+  transform: translateX(20px);
+}
+
+/* Checkbox Cards */
+.checkboxCardRow {
+  display: flex;
+  gap: 16px;
+}
+
+.checkboxCard {
+  flex: 1;
+  border: 1px solid #EAE2DD;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+}
+
+.checkboxSquare {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  border: 2px solid #D1D1D1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkboxChecked {
+  background-color: #C9971F;
+  border-color: #C9971F;
+  color: #fff;
+}
+
+.checkIcon { color: #3A3A3A; }
+
+/* Action Buttons */
+.accountActionRow {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btnPrimary {
+  background-color: #6E1E37;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.rightGroup {
+  display: flex;
+  gap: 16px;
+}
+
+.btnGrayOutline {
+  background: #fff;
+  color: #3A3A3A;
+  border: 1px solid #D1D1D1;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btnRedOutline {
+  background: #fff;
+  color: #C0392B;
+  border: 1px solid #C0392B;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Footer */
+.footerText {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  font-size: 13px;
+  font-style: italic;
+  color: #999;
+}
+
+.footerIcons {
+  display: flex;
+  gap: 16px;
+  color: #999;
+}
+
+@media (max-width: 1024px) {
+  .settingsGrid { grid-template-columns: 1fr; }
+  .subNavPanel { flex-direction: row; overflow-x: auto; }
+  .subNavItem { white-space: nowrap; }
+}
+
+@media (max-width: 768px) {
+  .mainLayout { margin-left: 0; }
+  .radioCardRow, .toggleRowSplit, .checkboxCardRow { flex-direction: column; }
+  .accountActionRow { flex-direction: column; align-items: stretch; }
+  .rightGroup { flex-direction: column; }
+}
